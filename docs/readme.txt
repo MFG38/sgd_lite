@@ -102,4 +102,4 @@ See credits.txt for a full credits list.
 
 ModDB page:			http://www.moddb.com/mods/satanic-gameshow-deluxe
 Dropbox folder:		http://www.dropbox.com/sh/l9z06sduajl15b4/AADrbci3mGPdi0SAztq7mRM2a?dl=0
-GitHub repo:		http://github.com/MFG38/sgd
+GitHub repo:		http://github.com/MFG38/sgd_lite
