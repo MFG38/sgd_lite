@@ -1,4 +1,4 @@
-Graphic SGDLOGO2, 640, 480
+Graphic SGDLOGO3, 640, 480
 {
 	XScale 2.0
 	YScale 2.0
