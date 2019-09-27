@@ -1,0 +1,93 @@
+class SGDZombieman : Zombieman replaces Zombieman
+{
+	Default
+	{
+		DropItem "SGDRifle";
+	}
+	
+	States
+	{
+	Pain.HolyWater:
+		POSS G 3 A_SetTranslation("HolyWaterTrans");
+		POSS G 3 A_Pain;
+		Goto See;
+	Pain.Fire:
+		POSS G 3 A_SetTranslation("CharredTrans");
+		POSS G 3 A_Pain;
+		Goto See;
+	Death:
+		POSS H 5
+		{
+			A_GiveToTarget("ZombiemenKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		POSS I 5 A_Scream;
+		POSS J 5 A_NoBlocking;
+		POSS K 5;
+		POSS L -1;
+		Stop;
+	Death.HolyWater:
+		POSS H 5
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("ZombiemenKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		POSS I 5 A_Scream;
+		POSS J 5 A_NoBlocking;
+		POSS K 5;
+		POSS L -1;
+		Stop;
+	Death.Fire:
+		POSS H 5
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("ZombiemenKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		POSS I 5 A_Scream;
+		POSS J 5 A_NoBlocking;
+		POSS K 5;
+		POSS L -1;
+		Stop;
+	XDeath:
+		POSS M 5
+		{
+			A_GiveToTarget("ZombiemenKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		POSS N 5 A_XScream;
+		POSS O 5 A_NoBlocking;
+		POSS PQRST 5;
+		POSS U -1;
+		Stop;
+	XDeath.HolyWater:
+		POSS M 5
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("ZombiemenKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		POSS N 5 A_XScream;
+		POSS O 5 A_NoBlocking;
+		POSS PQRST 5;
+		POSS U -1;
+		Stop;
+	XDeath.Fire:
+		POSS M 5
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("ZombiemenKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		POSS N 5 A_XScream;
+		POSS O 5 A_NoBlocking;
+		POSS PQRST 5;
+		POSS U -1;
+		Stop;
+	Raise:
+		POSS K 5 A_SetTranslation("ResetTrans");
+		POSS JIH 5;
+		Goto See;
+	}
+}

@@ -1,0 +1,34 @@
+class SGDSoulsphere : Soulsphere replaces Soulsphere
+{
+	Default
+	{
+		Inventory.PickupMessage "$SGD_ART_SOULSPHERE";
+		Inventory.ForbiddenTo "DemonizedPlayer";
+		-INVENTORY.ALWAYSPICKUP;
+	}
+}
+
+class SGDMegasphere : Megasphere replaces Megasphere
+{
+	Default
+	{
+		Inventory.PickupMessage "$SGD_ART_MEGASPHERE";
+		Inventory.ForbiddenTo "DemonizedPlayer";
+		-INVENTORY.ALWAYSPICKUP;
+	}
+}
+
+class SGDAllmap : Allmap replaces Allmap
+{
+	Default { Inventory.ForbiddenTo "DemonizedPlayer"; -INVENTORY.ALWAYSPICKUP; }
+}
+
+class SGDInfrared : Infrared replaces Infrared
+{
+	Default { Inventory.ForbiddenTo "DemonizedPlayer"; -INVENTORY.ALWAYSPICKUP; }
+}
+
+class SGDRadSuit : RadSuit replaces RadSuit
+{
+	Default { Inventory.ForbiddenTo "DemonizedPlayer"; -INVENTORY.ALWAYSPICKUP; }
+}

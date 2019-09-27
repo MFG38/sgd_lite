@@ -1,0 +1,12 @@
+gameinfo
+{
+	playerclasses = "SGDPlayer"
+	//drawreadthis = true
+	infopage = "HOWTO1"
+}
+
+map TITLEMAP "SGD Title"
+{
+	levelnum = 0
+	music = "MFG_HELL"
+}

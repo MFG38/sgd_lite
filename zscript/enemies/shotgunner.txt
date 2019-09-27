@@ -1,0 +1,88 @@
+class SGDShotgunner : ShotgunGuy replaces ShotgunGuy
+{
+	States
+	{
+	Pain.HolyWater:
+		SPOS G 3 A_SetTranslation("HolyWaterTrans");
+		SPOS G 3 A_Pain;
+		Goto See;
+	Pain.Fire:
+		SPOS G 3 A_SetTranslation("CharredTrans");
+		SPOS G 3 A_Pain;
+		Goto See;
+	Death:
+		SPOS H 5
+		{
+			A_GiveToTarget("ShotgunnersKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SPOS I 5 A_Scream;
+		SPOS J 5 A_NoBlocking;
+		SPOS K 5;
+		SPOS L -1;
+		Stop;
+	Death.HolyWater:
+		SPOS H 5
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("ShotgunnersKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SPOS I 5 A_Scream;
+		SPOS J 5 A_NoBlocking;
+		SPOS K 5;
+		SPOS L -1;
+		Stop;
+	Death.Fire:
+		SPOS H 5
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("ShotgunnersKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SPOS I 5 A_Scream;
+		SPOS J 5 A_NoBlocking;
+		SPOS K 5;
+		SPOS L -1;
+		Stop;
+	XDeath:
+		SPOS M 5
+		{
+			A_GiveToTarget("ShotgunnersKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SPOS N 5 A_XScream;
+		SPOS O 5 A_NoBlocking;
+		SPOS PQRST 5;
+		SPOS U -1;
+		Stop;
+	XDeath.HolyWater:
+		SPOS M 5
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("ShotgunnersKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SPOS N 5 A_XScream;
+		SPOS O 5 A_NoBlocking;
+		SPOS PQRST 5;
+		SPOS U -1;
+		Stop;
+	XDeath.Fire:
+		SPOS M 5
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("ShotgunnersKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SPOS N 5 A_XScream;
+		SPOS O 5 A_NoBlocking;
+		SPOS PQRST 5;
+		SPOS U -1;
+		Stop;
+	Raise:
+		SPOS L 5 A_SetTranslation("ResetTrans");
+		SPOS KJIH 5;
+		Goto See;
+	}
+}

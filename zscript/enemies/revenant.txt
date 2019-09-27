@@ -1,0 +1,56 @@
+class SGDRevenant: Revenant replaces Revenant
+{
+	States
+	{
+	Pain.HolyWater:
+		SKEL L 5 A_SetTranslation("HolyWaterTrans");
+		SKEL L 5 A_Pain;
+		Goto See;
+	Pain.Fire:
+		SKEL L 5 A_SetTranslation("CharredTrans");
+		SKEL L 5 A_Pain;
+		Goto See;
+	Death:
+		SKEL L 7
+		{
+			A_GiveToTarget("RevenantsKilled");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		SKEL M 7;
+		SKEL N 7 A_Scream;
+		SKEL O 7 A_NoBlocking;
+		SKEL P 7;
+		SKEL Q -1;
+		Stop;
+	Death.HolyWater:
+		SKEL L 7
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("RevenantsKilled");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		SKEL M 7;
+		SKEL N 7 A_Scream;
+		SKEL O 7 A_NoBlocking;
+		SKEL P 7;
+		SKEL Q -1;
+		Stop;
+	Death.Fire:
+		SKEL L 7
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("RevenantsKilled");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		SKEL M 7;
+		SKEL N 7 A_Scream;
+		SKEL O 7 A_NoBlocking;
+		SKEL P 7;
+		SKEL Q -1;
+		Stop;
+	Raise:
+		SKEL Q 5 A_SetTranslation("ResetTrans");
+		SKEL PONML 5;
+		Goto See;
+	}
+}

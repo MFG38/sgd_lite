@@ -1,0 +1,52 @@
+class SGDSpiderMastermind : SpiderMastermind replaces SpiderMastermind
+{
+	States
+	{
+	Pain.HolyWater:
+		SPID I 3 A_SetTranslation("HolyWaterTrans");
+		SPID I 3 A_Pain;
+		Goto See;
+	Pain.Fire:
+		SPID I 3 A_SetTranslation("CharredTrans");
+		SPID I 3 A_Pain;
+		Goto See;
+	Death:
+		SPID J 0
+		{
+			A_GiveToTarget("SpiderMastermindsKilled");
+			A_GiveToTarget("FinisherToken",100);
+		}
+		SPID J 20 A_Scream;
+		SPID K 10 A_NoBlocking;
+		SPID LMNOPQR 10;
+		SPID S 30;
+		SPID S -1 A_BossDeath;
+		Stop;
+	Death.HolyWater:
+		SPID J 0
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("SpiderMastermindsKilled");
+			A_GiveToTarget("FinisherToken",100);
+		}
+		SPID J 20 A_Scream;
+		SPID K 10 A_NoBlocking;
+		SPID LMNOPQR 10;
+		SPID S 30;
+		SPID S -1 A_BossDeath;
+		Stop;
+	Death.Fire:
+		SPID J 0
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("SpiderMastermindsKilled");
+			A_GiveToTarget("FinisherToken",100);
+		}
+		SPID J 20 A_Scream;
+		SPID K 10 A_NoBlocking;
+		SPID LMNOPQR 10;
+		SPID S 30;
+		SPID S -1 A_BossDeath;
+		Stop;
+	}
+}

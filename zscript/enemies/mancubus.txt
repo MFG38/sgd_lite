@@ -1,0 +1,53 @@
+class SGDMancubus : Fatso replaces Fatso
+{
+	States
+	{
+	Pain.HolyWater:
+		FATT J 3 A_SetTranslation("HolyWaterTrans");
+		FATT J 3 A_Pain;
+		Goto See;
+	Pain.Fire:
+		FATT J 3 A_SetTranslation("CharredTrans");
+		FATT J 3 A_Pain;
+		Goto See;
+	Death:
+		FATT K 6
+		{
+			A_GiveToTarget("MancubiKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		FATT L 6 A_Scream;
+		FATT M 6 A_NoBlocking;
+		FATT NOPQRS 6;
+		FATT T -1 A_BossDeath;
+		Stop;
+	Death.HolyWater:
+		FATT K 6
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("MancubiKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		FATT L 6 A_Scream;
+		FATT M 6 A_NoBlocking;
+		FATT NOPQRS 6;
+		FATT T -1 A_BossDeath;
+		Stop;
+	Death.Fire:
+		FATT K 6
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("MancubiKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		FATT L 6 A_Scream;
+		FATT M 6 A_NoBlocking;
+		FATT NOPQRS 6;
+		FATT T -1 A_BossDeath;
+		Stop;
+	 Raise:
+		FATT R 5 A_SetTranslation("ResetTrans");
+		FATT QPONMLK 5;
+		Goto See;
+	}
+}

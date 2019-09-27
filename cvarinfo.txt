@@ -1,0 +1,5 @@
+user noarchive bool sgd_debugmode = false;
+
+// HUD stuff
+user int sgd_finisherprompt = 2;		// 0 = Off, 1 = No button prompt, 2 = Full
+user bool sgd_displayfbar = true;

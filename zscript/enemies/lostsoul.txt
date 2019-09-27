@@ -1,0 +1,52 @@
+class SGDLostSoul : LostSoul replaces LostSoul
+{
+	States
+	{
+	Pain.HolyWater:
+		SKUL E 3 BRIGHT A_SetTranslation("HolyWaterTrans");
+		SKUL E 3 BRIGHT A_Pain;
+		Goto See;
+	Pain.Fire:
+		SKUL E 3 BRIGHT A_SetTranslation("CharredTrans");
+		SKUL E 3 BRIGHT A_Pain;
+		Goto See;
+	Death:
+		SKUL F 6 BRIGHT
+		{
+			A_GiveToTarget("LostSoulsKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SKUL G 6 BRIGHT A_Scream;
+		SKUL H 6 BRIGHT;
+		SKUL I 6 BRIGHT A_NoBlocking;
+		SKUL J 6;
+		SKUL K 6;
+		Stop;
+	Death.HolyWater:
+		SKUL F 6 BRIGHT
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("LostSoulsKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SKUL G 6 BRIGHT A_Scream;
+		SKUL H 6 BRIGHT;
+		SKUL I 6 BRIGHT A_NoBlocking;
+		SKUL J 6;
+		SKUL K 6;
+		Stop;
+	Death.Fire:
+		SKUL F 6 BRIGHT
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("LostSoulsKilled");
+			A_GiveToTarget("FinisherToken",8);
+		}
+		SKUL G 6 BRIGHT A_Scream;
+		SKUL H 6 BRIGHT;
+		SKUL I 6 BRIGHT A_NoBlocking;
+		SKUL J 6;
+		SKUL K 6;
+		Stop;
+	}
+}

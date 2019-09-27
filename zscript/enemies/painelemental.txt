@@ -1,0 +1,53 @@
+class SGDPainElemental : PainElemental replaces PainElemental
+{
+	States
+	{
+	Pain.HolyWater:
+		PAIN G 6 A_SetTranslation("HolyWaterTrans");
+		PAIN G 6 A_Pain;
+		Goto See;
+	Pain.Fire:
+		PAIN G 6 A_SetTranslation("CharredTrans");
+		PAIN G 6 A_Pain;
+		Goto See;
+	Death:
+		PAIN H 8 BRIGHT
+		{
+			A_GiveToTarget("PainElementalsKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		PAIN I 8 BRIGHT A_Scream;
+		PAIN JK 8 BRIGHT;
+		PAIN L 8 BRIGHT A_PainDie;
+		PAIN M 8 BRIGHT;
+		Stop;
+	Death.HolyWater:
+		PAIN H 8 BRIGHT
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("PainElementalsKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		PAIN I 8 BRIGHT A_Scream;
+		PAIN JK 8 BRIGHT;
+		PAIN L 8 BRIGHT A_PainDie;
+		PAIN M 8 BRIGHT;
+		Stop;
+	Death.Fire:
+		PAIN H 8 BRIGHT
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("PainElementalsKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		PAIN I 8 BRIGHT A_Scream;
+		PAIN JK 8 BRIGHT;
+		PAIN L 8 BRIGHT A_PainDie;
+		PAIN M 8 BRIGHT;
+		Stop;
+	Raise:
+		PAIN M 8 A_SetTranslation("ResetTrans");
+		PAIN LKJIH 8;
+		Goto See;
+	}
+}

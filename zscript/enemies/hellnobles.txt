@@ -1,0 +1,113 @@
+class SGDHellKnight : HellKnight replaces HellKnight
+{
+	States
+	{
+	Pain.HolyWater:
+		BOS2 H  2 A_SetTranslation("HolyWaterTrans");
+		BOS2 H  2 A_Pain;
+		Goto See;
+	Pain.Fire:
+		BOS2 H  2 A_SetTranslation("CharredTrans");
+		BOS2 H  2 A_Pain;
+		Goto See;
+	Death:
+		BOS2 I  8
+		{
+			A_GiveToTarget("HellKnightsKilled");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		BOS2 J  8 A_Scream;
+		BOS2 K  8;
+		BOS2 L  8 A_NoBlocking;
+		BOS2 MN 8;
+		BOS2 O -1;
+		Stop;
+	Death.HolyWater:
+		BOS2 I  8
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("HellKnightsKilled");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		BOS2 J  8 A_Scream;
+		BOS2 K  8;
+		BOS2 L  8 A_NoBlocking;
+		BOS2 MN 8;
+		BOS2 O -1;
+		Stop;
+	Death.Fire:
+		BOS2 I  8
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("HellKnightsKilled");
+			A_GiveToTarget("FinisherToken",25);
+		}
+		BOS2 J  8 A_Scream;
+		BOS2 K  8;
+		BOS2 L  8 A_NoBlocking;
+		BOS2 MN 8;
+		BOS2 O -1;
+		Stop;
+	Raise:
+		BOS2 O 8 A_SetTranslation("ResetTrans");
+		BOS2 NMLKJI  8;
+		Goto See;
+	}
+}
+
+class SGDBaron : BaronOfHell replaces BaronOfHell
+{
+	States
+	{
+	Pain.HolyWater:
+		BOSS H  2 A_SetTranslation("HolyWaterTrans");
+		BOSS H  2 A_Pain;
+		Goto See;
+	Pain.Fire:
+		BOSS H  2 A_SetTranslation("CharredTrans");
+		BOSS H  2 A_Pain;
+		Goto See;
+	Death:
+		BOSS I  8
+		{
+			A_GiveToTarget("BaronsKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		BOSS J  8 A_Scream;
+		BOSS K  8;
+		BOSS L  8 A_NoBlocking;
+		BOSS MN 8;
+		BOSS O -1 A_BossDeath;
+		Stop;
+	Death.HolyWater:
+		BOSS I  8
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("HellKnightsKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		BOSS J  8 A_Scream;
+		BOSS K  8;
+		BOSS L  8 A_NoBlocking;
+		BOSS MN 8;
+		BOSS O -1;
+		Stop;
+	Death.Fire:
+		BOSS I  8
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("HellKnightsKilled");
+			A_GiveToTarget("FinisherToken",40);
+		}
+		BOSS J  8 A_Scream;
+		BOSS K  8;
+		BOSS L  8 A_NoBlocking;
+		BOSS MN 8;
+		BOSS O -1;
+		Stop;
+	Raise:
+		BOSS O 8 A_SetTranslation("ResetTrans");
+		BOSS NMLKJI  8;
+		Goto See;
+	}
+}

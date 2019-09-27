@@ -1,0 +1,76 @@
+class SGDNazi : WolfensteinSS replaces WolfensteinSS
+{
+	States
+	{
+	Pain.HolyWater:
+		SSWV H 3 A_SetTranslation("HolyWaterTrans");
+		SSWV H 3 A_Pain;
+		Goto See;
+	Pain.Fire:
+		SSWV H 3 A_SetTranslation("CharredTrans");
+		SSWV H 3 A_Pain;
+		Goto See;
+	Death:
+		SSWV I 5 A_GiveToTarget("FinisherToken",12);
+		SSWV J 5 A_Scream;
+		SSWV K 5 A_NoBlocking;
+		SSWV L 5;
+		SSWV M -1;
+		Stop;
+	Death.HolyWater:
+		SSWV I 5
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		SSWV J 5 A_Scream;
+		SSWV K 5 A_NoBlocking;
+		SSWV L 5;
+		SSWV M -1;
+		Stop;
+	Death.Fire:
+		SSWV I 5
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		SSWV J 5 A_Scream;
+		SSWV K 5 A_NoBlocking;
+		SSWV L 5;
+		SSWV M -1;
+		Stop;
+	XDeath:
+		SSWV N 5 A_GiveToTarget("FinisherToken",12);
+		SSWV O 5 A_XScream;
+		SSWV P 5 A_NoBlocking;
+		SSWV QRSTU 5;
+		SSWV V -1;
+		Stop;
+	XDeath.HolyWater:
+		SSWV N 5
+		{
+			A_SetTranslation("HolyWaterTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		SSWV O 5 A_XScream;
+		SSWV P 5 A_NoBlocking;
+		SSWV QRSTU 5;
+		SSWV V -1;
+		Stop;
+	XDeath.Fire:
+		SSWV N 5
+		{
+			A_SetTranslation("CharredTrans");
+			A_GiveToTarget("FinisherToken",12);
+		}
+		SSWV O 5 A_XScream;
+		SSWV P 5 A_NoBlocking;
+		SSWV QRSTU 5;
+		SSWV V -1;
+		Stop;
+	Raise:
+		SSWV M 5 A_SetTranslation("ResetTrans");
+		SSWV LKJI 5;
+		Goto See;
+	}
+}

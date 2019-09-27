@@ -1,0 +1,19 @@
+class SGDArmorBonus : ArmorBonus replaces ArmorBonus
+{
+	Default
+	{
+		Inventory.PickupMessage "$SGD_ART_ARMORBONUS";
+		Inventory.ForbiddenTo "DemonizedPlayer";
+		-INVENTORY.ALWAYSPICKUP;
+	}
+}
+
+class SGDSecurityArmor : GreenArmor replaces GreenArmor
+{
+	Default { Inventory.PickupMessage "$SGD_ITEM_GREENARMOR"; Inventory.ForbiddenTo "DemonizedPlayer"; }
+}
+
+class SGDCombatArmor : BlueArmor replaces BlueArmor
+{
+	Default { Inventory.PickupMessage "$SGD_ITEM_BLUEARMOR"; Inventory.ForbiddenTo "DemonizedPlayer"; }
+}
