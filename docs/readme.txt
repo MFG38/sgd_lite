@@ -55,10 +55,10 @@ guaranteed nor planned.
 
 Bugs may be reported by the following means:
 
-E-mail:					H3llraich@yahoo.com
-Discord PM:				MFG38#3393
+E-mail:			H3llraich@yahoo.com
+Discord PM:		MFG38#3393
 ZDoom project thread:	http://forum.zdoom.org/viewtopic.php?f=43&t=65490
-ModDB page:				http://www.moddb.com/mods/satanic-gameshow-deluxe
+ModDB page:		http://www.moddb.com/mods/satanic-gameshow-deluxe
 
 If you are sending a bug report by e-mail, please clearly state that you are
 doing so in the e-mail subject line. Make sure to add any relevant attachments,
@@ -68,8 +68,8 @@ whereby you are submitting it.
 Please note that due to changes committed to the GitHub repository being
 incremental, builds downloaded and compiled from the repository are not guaranteed
 to work as well as the stable builds. For this reason, I'd advise you to only
-submit bug reports found in the stable builds, which follow the sgd_*.pk3 naming
-convention and can be downloaded from either ModDB or Dropbox.
+submit bug reports found in the stable builds, which follow the sgd_lite_*.pk3
+naming convention and can be downloaded from either ModDB or Dropbox.
 
 
 5. LICENSE INFORMATION
@@ -100,6 +100,6 @@ See credits.txt for a full credits list.
 7. LINKS
 ========
 
-ModDB page:			http://www.moddb.com/mods/satanic-gameshow-deluxe
+ModDB page:		http://www.moddb.com/mods/satanic-gameshow-deluxe
 Dropbox folder:		http://www.dropbox.com/sh/l9z06sduajl15b4/AADrbci3mGPdi0SAztq7mRM2a?dl=0
 GitHub repo:		http://github.com/MFG38/sgd_lite
