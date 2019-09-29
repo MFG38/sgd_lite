@@ -2,5 +2,5 @@ Graphic SGDLOGO3, 640, 480
 {
 	XScale 2.0
 	YScale 2.0
-	Patch SGDLOGO2, 0, 0
+	Patch SGDLOGO3, 0, 0
 }

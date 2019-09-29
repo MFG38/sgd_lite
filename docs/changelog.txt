@@ -1,2 +1,6 @@
+[??-??-????] v1.0.1:
+- Fixed the Minigun's Level 1 and 2 finishers using the wrong function.
+- Updated the title graphic.
+
 [27-09-2019] v1.0:
 - First public release.
