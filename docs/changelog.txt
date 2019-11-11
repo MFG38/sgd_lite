@@ -1,3 +1,6 @@
+[??-??-????] v2.0:
+- Changed the Fists' "firing" logic to be random instead of dependent on the FistSwitcher dummy inventory item.
+
 [30-09-2019] v1.0.1:
 - Fixed the Minigun's Level 1 and 2 finishers using the wrong function.
 - Updated the title graphic.
