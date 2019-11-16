@@ -1,4 +1,5 @@
-[??-??-????] v2.0:
+[??-??-????] v1.1:
+- Increased the damage of the Double-Barrel Shotgun's pellets from random(16,20) to random(20,24).
 - Changed the Fists' "firing" logic to be random instead of dependent on the FistSwitcher dummy inventory item.
 
 [30-09-2019] v1.0.1:
