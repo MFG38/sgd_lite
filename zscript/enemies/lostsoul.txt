@@ -1,4 +1,4 @@
-class SGDLostSoul : SGDMonster replaces LostSoul
+class SGDLostSoul : LostSoul replaces LostSoul
 {
 	Default
 	{
