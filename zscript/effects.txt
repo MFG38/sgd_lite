@@ -5,7 +5,7 @@ class SGDProjectileTrail : Actor
 		Radius 3;
 		Height 6;
 		Renderstyle "Translucent";
-		Alpha 0.5;
+		Alpha 0.25;
 		Scale 0.75;
 		+NOBLOCKMAP;
 		+NOGRAVITY;
@@ -15,7 +15,7 @@ class SGDProjectileTrail : Actor
 	States
 	{
 	Spawn:
-		FX04 AABBCCDDEE 1 A_FadeOut(0.05);
+		FX04 AABBCCDDEE 1 A_FadeOut(0.025);
 		Stop; 
 	}
 }
