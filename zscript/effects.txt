@@ -25,6 +25,7 @@ class ArgentRifleLaserTrail : SGDProjectileTrail
 	Default
 	{
 		Scale 1.0;
+		Alpha 0.5;
 	}
 	
 	States

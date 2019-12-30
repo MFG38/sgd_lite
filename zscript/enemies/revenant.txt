@@ -1,5 +1,11 @@
 class SGDRevenant: Revenant replaces Revenant
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:

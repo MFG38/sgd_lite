@@ -1,5 +1,11 @@
 class SGDMancubus : Fatso replaces Fatso
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:

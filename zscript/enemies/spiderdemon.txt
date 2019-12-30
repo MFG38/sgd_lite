@@ -1,5 +1,11 @@
 class SGDSpiderMastermind : SpiderMastermind replaces SpiderMastermind
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:

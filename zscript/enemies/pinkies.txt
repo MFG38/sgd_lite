@@ -1,5 +1,11 @@
 class SGDPinky : Demon replaces Demon
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:
@@ -57,6 +63,12 @@ class SGDPinky : Demon replaces Demon
 
 class SGDSpectre : Spectre replaces Spectre
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:

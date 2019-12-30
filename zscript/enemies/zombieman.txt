@@ -2,6 +2,8 @@ class SGDZombieman : Zombieman replaces Zombieman
 {
 	Default
 	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
 		DropItem "SGDRifle";
 	}
 	

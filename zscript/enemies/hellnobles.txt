@@ -1,5 +1,11 @@
 class SGDHellKnight : HellKnight replaces HellKnight
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:
@@ -57,6 +63,12 @@ class SGDHellKnight : HellKnight replaces HellKnight
 
 class SGDBaron : BaronOfHell replaces BaronOfHell
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:

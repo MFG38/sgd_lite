@@ -1,5 +1,11 @@
 class SGDCyberdemon : Cyberdemon replaces Cyberdemon
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 40;
+	}
+
 	States
 	{
 	Pain.HolyWater:

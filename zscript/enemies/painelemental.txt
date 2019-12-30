@@ -1,5 +1,11 @@
 class SGDPainElemental : PainElemental replaces PainElemental
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:

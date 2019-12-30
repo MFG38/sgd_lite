@@ -1,5 +1,11 @@
 class SGDNazi : WolfensteinSS replaces WolfensteinSS
 {
+	Default
+	{
+		PainChance "HolyWater", 255;
+		PainChance "Fire", 50;
+	}
+
 	States
 	{
 	Pain.HolyWater:
