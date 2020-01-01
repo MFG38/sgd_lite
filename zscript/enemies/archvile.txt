@@ -3,7 +3,7 @@ class SGDFlameBoi : Archvile replaces Archvile
 	Default
 	{
 		PainChance "HolyWater", 255;
-		PainChance "Fire", 50;
+		PainChance "Fire", 200;
 	}
 
 	States

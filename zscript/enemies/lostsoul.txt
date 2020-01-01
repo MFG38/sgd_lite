@@ -3,7 +3,7 @@ class SGDLostSoul : LostSoul replaces LostSoul
 	Default
 	{
 		PainChance "HolyWater", 255;
-		PainChance "Fire", 50;
+		PainChance "Fire", 200;
 		DamageFactor "Fire", 0.85;
 	}
 
