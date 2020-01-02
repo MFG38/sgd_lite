@@ -1,6 +1,7 @@
 [??-??-????] v1.1.1:
 - Increased the translucency of SGDProjectileTrail.
 - Added generic PainChance stuff for Holy Water and Fire damage for all monsters.
+- Truncated BHExplosion's Spawn state code.
 
 [25-12-2019] v1.1:
 - Increased the damage of the Double-Barrel Shotgun's pellets from random(16,20) to random(20,24).
