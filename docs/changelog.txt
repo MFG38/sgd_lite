@@ -3,6 +3,7 @@
 - Added generic PainChance stuff for Holy Water and Fire damage for all monsters.
 - Truncated BHExplosion's Spawn state code.
 - Fixed a minor but annoying miscapitalized letter in credits.txt.
+- Added lookup identifiers for all missing text strings to language.txt; useful for potential localization later.
 
 [25-12-2019] v1.1:
 - Increased the damage of the Double-Barrel Shotgun's pellets from random(16,20) to random(20,24).

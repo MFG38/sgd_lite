@@ -5,6 +5,14 @@ SGD_VERSIONNUM = "v1.2-pre";
 SGD_MENU_HOWTOPLAY = "How to play";
 SGD_MENU_MODSETUP = "Mod settings";
 
+SGD_TTL_CVARS = "SGD Options";
+SGD_OM_FINISHERBAR = "Display finisher bar";
+SGD_OM_FMSGTYPE = "Finisher message type";
+
+SGD_CVAR_FMSG0 = "Off";
+SGD_CVAR_FMSG1 = "No button prompt";
+SGD_CVAR_FMSG2 = "Full";
+
 SGD_SKILL_VERYEASY = "Slayer in Training";
 SGD_SKILL_EASY = "Fresh Graduate";
 SGD_SKILL_MEDIUM = "Been There, Done That";
